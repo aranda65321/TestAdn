@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
         if(create){
           this.router.navigate(['/login']);
         }else{
-          alert("El usuario ya existe")
+          alert("El usuario ya existe") 
         }
       });
     }else{

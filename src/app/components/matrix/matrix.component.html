@@ -1,0 +1,37 @@
+<div class="div-content-home fadeInDown">
+    <div class="div-matrix text-center">
+        <div class="matrix">
+            <label class="label-title-home">Estadisticas</label>
+            <table class="matrix-table">
+                <tr>
+                    <td>
+                        <label class="label-title-home">Adn Validos: </label>
+                        <label class="label-title-home">{{adnValid}} - </label>
+                    </td>
+                    <td>
+                        <label class="label-title-home">Adn Invalidos: </label>
+                        <label class="label-title-home">{{adnInvalid}} - </label>
+                    </td>
+                    <td>
+                        <label class="label-title-home">Rate: </label>
+                        <label class="label-title-home">{{ratio}}</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <label class="label-title-home">Inserte las cadenas de Adn</label>
+        <div class="matrix"  >
+            <table class="matrix-table" style="margin: 0 auto;">
+                <tr *ngFor="let array of valuesInputs; let i = index">
+                    <td *ngFor="let value of valuesInputs[i]; let j = index ">
+                        <div class="div-inputs" >
+                            <input id="input{{i}}{{j}}" class="text-Input" type="text" pattern="[A-Z]+" maxlength="1" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <input id="id_btn" type="button"  value="Enviar" class="btn btn-primary btn-large btn-block" (click)="sentToApiRest()"/>
+        <a class="login-link" (click)="logout()">Salir</a>
+    </div>
+  </div>

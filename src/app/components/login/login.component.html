@@ -1,0 +1,18 @@
+<div class="div-content fadeInDown">
+    <div class="div-login text-center">
+        <label class="p-titleLogin">Login</label>
+        <div class="div-formulario">
+            <div class="div_separatorInputs">
+                <input type="text"  placeholder="Nombre Usuario" [formControl]="username" required="required"/>
+            </div>
+            <div class="div_separatorInputs">
+                <input type="password"  placeholder="Contraseña" [formControl]="password" required="required"/>
+            </div>
+        </div>
+        <input type="button"  value="Iniciar" class="btn btn-primary btn-large btn-block" (click)="loginUser()"/>
+        <a class="login-link" (click)="register()">Register</a>
+    </div>
+   
+  </div>
+
+  

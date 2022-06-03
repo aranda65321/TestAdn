@@ -1,0 +1,14 @@
+<div class="div-content-home fadeInDown">
+    <div class="div-login text-center">
+        <label class="label-title-home">Configurarion matrix NxN</label>
+        <div class="div-formulario">
+            <div class="div_separatorInputs">
+                <input type="text"  placeholder="Tamaño N" [formControl]="matrixSize" />
+            </div>
+            <div class="div_separatorInputs">
+                <input type="button"  value="Crear" class="btn btn-primary btn-large btn-block" (click)="createMatrix()"/>
+            </div>
+        </div>
+        <a class="login-link" (click)="logout()">Salir</a>
+    </div>
+  </div>
